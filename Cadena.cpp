@@ -2,12 +2,17 @@
 #include<conio.h>
 #include<cstring>
 using namespace std;
-// Longitud de una cadena de caracteres. Funcion en strlen().
+// Hacer un programa que pida al usuario una cadena de caracteres. verificar la longitud de la cadena, y si esta supera los 10 caracteres mostrarla en pantalla, caso contrario no mostrarla.
 int main(){
-char palabra[] = "Hola";    
-int longitud=0;
-longitud = strlen(palabra);
-cout << "La longitud de la cadena es: " << longitud << endl;
+    char frase[50];
+    cout<<"Digite una cadena de caracteres:\n";
+    cin.getline(frase,50,'\n');
+
+if(strlen(frase)>10){
+    cout<<frase<<endl;
+} else{
+    cout<<"La cadena no supera los 10 caracteres.\n";
+}
 getch();
     return 0;
 }
