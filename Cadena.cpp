@@ -2,17 +2,15 @@
 #include<conio.h>
 #include<cstring>
 using namespace std;
-// Hacer un programa que pida al usuario una cadena de caracteres. verificar la longitud de la cadena, y si esta supera los 10 caracteres mostrarla en pantalla, caso contrario no mostrarla.
 int main(){
-    char frase[50];
-    cout<<"Digite una cadena de caracteres:\n";
-    cin.getline(frase,50,'\n');
+// Copiar el contenido de una cadena a otra - Funcion strcpy()
+char nombre[]="Panfilo";
+char nombre2[20];
 
-if(strlen(frase)>10){
-    cout<<frase<<endl;
-} else{
-    cout<<"La cadena no supera los 10 caracteres.\n";
-}
+strcpy(nombre2,nombre);
+
+cout<<nombre2<<endl;
+
 getch();
     return 0;
 }
