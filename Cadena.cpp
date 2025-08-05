@@ -3,13 +3,13 @@
 #include<cstring>
 using namespace std;
 int main(){
-// Añadir o concatenar una cadena con otra- Función strcat()
-char cad1[] = "Esto es una cadena\n";
-char cad2[] = " y esta es otra cadena\n";
-
-strcpy(cad3,cad1);//cad3= "Esto es una cadena"
-strcat(cad3, cad2); //cad3="Esto es una cadena de ejemplo"
-cout<<cad3<<endl;
+// Crear una cadena que tenga la siguiente frse "Hola que tal", luego crear otra cadena para preguntarle al usuario su nombre, por ultimo añadir el nombre al final de la primera cadena y mostrar el mensaje completo "Hola que tal, [nombre del usuario]".
+char cad[] = "Hola que tal\n";
+char cad2[50];
+cout<<"Ingrese su nombre:";
+cin.getline(cad2,50,'\n');
+start(cad,cad2);
+cout<<"Saludo completo:\n"<<cad;
 getch();
     return 0;
 }
