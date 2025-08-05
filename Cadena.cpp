@@ -3,20 +3,13 @@
 #include<cstring>
 using namespace std;
 int main(){
-// Pedir al usuario que ingrese 2 cadenas de caracteres, e indicar si 
-// ambas cadenas son iguales, en caso de no serlo, indicar cual es mayor alfabeticamente.
-char palabra[30], palabra2[30];
-cout<<"Digite la primera cadena:\n";
-cin.getline(palabra,30,'\n');
-cout<<"Digite la segunda cadena:\n";
-cin.getline(palabra2,30,'\n');
-if(strcmp(palabra, palabra2)==0){
-    cout<<">Ambas palabras son iguales\n";
-} else if (strcmp(palabra, palabra2) > 0){
-    cout<<palabra<<"es mayor alfabeticamente que\n";
-} else{
-    cout<<palabra2<<"es mayor alfabeticamente que\n";
-}
+// Añadir o concatenar una cadena con otra- Función strcat()
+char cad1[] = "Esto es una cadena\n";
+char cad2[] = " y esta es otra cadena\n";
+
+strcpy(cad3,cad1);//cad3= "Esto es una cadena"
+strcat(cad3, cad2); //cad3="Esto es una cadena de ejemplo"
+cout<<cad3<<endl;
 getch();
     return 0;
 }
