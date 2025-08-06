@@ -3,22 +3,27 @@
 #include<stdlib.h>
 using namespace std;
 int main(){
-//  Pedir al usuario 2 cadenas de caracteres de numeros, uno entero y el otro reconvertirlos a sus respectivos valores y por ultimo sumarlos.
-char cad1[20], cad2[20];
-int valorEntero;
-float valorFlotante;
+//  Realice un programa que lea una cadena de caracteres de la entrada estandar y muestre en la salida cuantas ocurrencias de cada vocal exiten en la cadena.
+char frase[30];
+int vocal_a=0, vocal_e=0, vocal_i=0, vocal_o=0, vocal_u=0;
+cout<<"Ingrese una frase:\n";
+cin.getline(frase,30,'\n'); 
 
-// Guardar los numeros como caracteres
-cout<<"Digite un valor entero:\n";
-cin.getline(cad1,20,'\n');
-cout<<"Digite un valor flotante:\n";
-cin.getline(cad2,20,'\n');
-
-valorEntero=atoi(cad1); // Convertir cadena a entero
-valorFlotante=atof(cad2); // Convertir cadena a flotante
-
-//Suma los 2 numeros
-cout<<"La suma de los numeros es:\n"<<valorEntero+valorFlotante<<endl;
+for(int i=0; frase<30; i++){
+    switch(frase[i]){
+        case 'a': vocal_a++; break;
+        case 'e': vocal_e++; break;
+        case 'i': vocal_i++; break;
+        case 'o': vocal_o++; break;
+        case 'u': vocal_u++; break;
+    }
+}
+cout<<"Cantidad de vocales 'a' encontradas:"<<vocal_a<<endl;
+cout<<"Cantidad de vocales 'e' encontradas:"<<vocal_e<<endl;
+cout<<"Cantidad de vocales 'i' encontradas:"<<vocal_i<<endl;
+cout<<"Cantidad de vocales 'o' encontradas:"<<vocal_o<<endl;
+cout<<"Cantidad de vocales 'u' encontradas:"<<vocal_u<<endl;
+cout<<"Presione una tecla para salir..."<<endl;
 
 getch();
  return 0;
