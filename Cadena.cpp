@@ -3,15 +3,22 @@
 #include<stdlib.h>
 using namespace std;
 int main(){
-// Transformar una cadena de numeros - Funcion atoi() y atof()
-// "123.45" -> 123.45
+//  Pedir al usuario 2 cadenas de caracteres de numeros, uno entero y el otro reconvertirlos a sus respectivos valores y por ultimo sumarlos.
+char cad1[20], cad2[20];
+int valorEntero;
+float valorFlotante;
 
-char cad[]= "1234.567";
-float numero;
-//numero=atof - transforma a cadena de numeros con decimales.
-//numero=atoi - transforma a cadena de numeros enteros.
-nummero=atoi(cad);
-cout<<"El numero es:\n"<<numero;
+// Guardar los numeros como caracteres
+cout<<"Digite un valor entero:\n";
+cin.getline(cad1,20,'\n');
+cout<<"Digite un valor flotante:\n";
+cin.getline(cad2,20,'\n');
+
+valorEntero=atoi(cad1); // Convertir cadena a entero
+valorFlotante=atof(cad2); // Convertir cadena a flotante
+
+//Suma los 2 numeros
+cout<<"La suma de los numeros es:\n"<<valorEntero+valorFlotante<<endl;
 
 getch();
  return 0;
