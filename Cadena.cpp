@@ -1,23 +1,17 @@
 #include<iostream>
 #include<conio.h>
-#include<string.h>
+#include<stdlib.h>
 using namespace std;
 int main(){
-// Pedir su nombre al usuario en Mayuscula, si su nombre comienza por la letra convertir su nombre a minusculas, caso contrario no convertirlo.
-char nombre[30];
+// Transformar una cadena de numeros - Funcion atoi() y atof()
+// "123.45" -> 123.45
 
-cout<<"Digite su nombre en mayusculas:\n";
-cin.getline(nombre, 30,'\n');
-
-if(strncmp(nombre, "A", 1)==0){
-    strlwr(nombre);
-    cout<<"Su nombre en minusculas es:\n";
-    cout<<nombre<<endl;
-}
-else{
-    cout<<"El nombre no comienza con la letra A:\n"; 
-    cout<<nombre<<endl;
-}
+char cad[]= "1234.567";
+float numero;
+//numero=atof - transforma a cadena de numeros con decimales.
+//numero=atoi - transforma a cadena de numeros enteros.
+nummero=atoi(cad);
+cout<<"El numero es:\n"<<numero;
 
 getch();
  return 0;
