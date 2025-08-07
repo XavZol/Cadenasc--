@@ -3,28 +3,29 @@
 #include<stdlib.h>
 using namespace std;
 int main(){
-// Ordenamiento por inserción
-int numeros[] = {4,2,3,1,5};
-int i,pos, aux;
-
-for(i=0;i<5; i++){
-    pos = i; 
-    aux = numeros[i];
-
-    while((pos>0) && (numeros[pos-1]>aux)){
-        numeros[pos] = numeros[pos-1];
-        pos--;
+// Ordenamiento por selección
+int numeros[] = {3,2,1,5,4};
+int i, j, aux, min;
+// Algoritmo de ordenamiento por selección
+for(i=0;i<5;i++){
+    min=i;
+    for(j=i+1;j<5;j++){
+        if(numeros[j]<numeros[min]){
+        min=j;
     }
-    numeros[pos] = aux;
+  }
+  aux=numeros[i];
+  nummeros[i]=numeros[min];
+  numeros[min]=aux;
 }
-cout<<"Orden Ascendente:\n";
-for(i=0;i<5; i++){
+cout<<"Orden ascendente:\n";
+ for(i=0;i<5;i++){
     cout<<numeros[i]<<"\n";
-}
-cout<<"\nOrden Descendente:\n";
-for(i=4;i>=0; i--){
+ }
+ cout<<"\nOrden descendente:\n";
+ for(i=4;i>=0;i--){
     cout<<numeros[i]<<"\n";
-}
+ }
 
 getch();
  return 0;
