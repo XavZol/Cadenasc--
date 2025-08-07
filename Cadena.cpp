@@ -3,28 +3,29 @@
 #include<stdlib.h>
 using namespace std;
 int main(){
-//  Realice un programa que lea una cadena de caracteres de la entrada estandar y muestre en la salida cuantas ocurrencias de cada vocal exiten en la cadena.
-char frase[30];
-int vocal_a=0, vocal_e=0, vocal_i=0, vocal_o=0, vocal_u=0;
-cout<<"Ingrese una frase:\n";
-cin.getline(frase,30,'\n'); 
+// Metodo burbuja
+int numeros[] = {4,1,2,3,5};
+int i,j, aux;
 
-for(int i=0; frase<30; i++){
-    switch(frase[i]){
-        case 'a': vocal_a++; break;
-        case 'e': vocal_e++; break;
-        case 'i': vocal_i++; break;
-        case 'o': vocal_o++; break;
-        case 'u': vocal_u++; break;
+for(i=0; i<5; i++){
+    for(j=0;j<5; j++){
+        if(numeros[j]>numeros[j+1]){
+            aux = numeros[j];
+            numeros[j] = numeros[j+1];
+            numeros[j+1] = aux;
+        }
     }
 }
-cout<<"Cantidad de vocales 'a' encontradas:"<<vocal_a<<endl;
-cout<<"Cantidad de vocales 'e' encontradas:"<<vocal_e<<endl;
-cout<<"Cantidad de vocales 'i' encontradas:"<<vocal_i<<endl;
-cout<<"Cantidad de vocales 'o' encontradas:"<<vocal_o<<endl;
-cout<<"Cantidad de vocales 'u' encontradas:"<<vocal_u<<endl;
-cout<<"Presione una tecla para salir..."<<endl;
-
+// Imprimir el resultado
+cout<<"Ordenar los numeros en orden ascendente:\n";
+for(i=0; i<5; i++){
+    cout<<numeros[i]<<"\n";
+}
+// Metodo burbuja inverso 
+cout<<"\nOrdenar los numeros en orden descendente:\n";
+for(i=4; i>=0; i--){
+    cout<<numeros[i]<<"\n";
+}
 getch();
  return 0;
 }
